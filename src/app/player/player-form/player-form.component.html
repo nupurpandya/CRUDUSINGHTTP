@@ -1,0 +1,29 @@
+<h2>Form</h2>
+<div class="form-class d-flex justify-content-center">
+    <form [formGroup]="playerForm" class="w-50 mt-4" (ngSubmit)="condition? postData() : editPlayer()">
+        <div class="mb-3">
+          <label for="name" class="form-label">Player Name</label>
+          <input type="text" class="form-control" id="name" formControlName="playername" >
+        
+        </div>
+        <div class="mb-3">
+          <label for="country" class="form-label">Country</label>
+          <input type="country" class="form-control" id="country" formControlName="country" >
+        </div>
+        <div class="mb-3">
+            <label  for="score">Score</label>
+          <input type="text"  id="score" class="form-control" formControlName="playerscore" >
+        </div>
+        <div class="mb-3">
+            <label for="exp">Exp</label>
+          <input type="exp"  id="exp" class="form-control" formControlName="exp" >
+        </div>
+        <div class="mb-3">
+            <label  for="age">Age</label>
+          <input type="text"  id="age" class="form-control" formControlName="age" >
+        </div>
+        <!-- <input type="text" name="nupur" id="nupur" #inputref>
+        <button (click)="getRef(inputref)">REFERENCE</button> -->
+        <button type="submit" class="btn btn-primary" [disabled]="playerForm.invalid">{{btn}}</button>
+      </form>
+    </div>

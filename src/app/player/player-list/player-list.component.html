@@ -1,0 +1,29 @@
+<h2>Player List</h2>
+<div>
+<table class="table w-75 my-4">
+    <thead class="table-info">
+        <tr>
+            <th>ID</th>
+            <th>Player Name</th>
+            <th>Country</th>
+            <th>Player Score</th>
+            <th>Exp in Years</th>
+            <th>Player Age</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let a of user">
+            <td>{{a.id}}</td>
+            <td>{{a.playername}}</td>
+            <td>{{a.country}}</td>
+            <td>{{a.playerscore}}</td>
+            <td>{{a.exp}}</td>
+            <td>{{a.age}}</td>
+            <td><button class="btn btn-primary btn-edit me-3" (click)="editPlayer(a.id)">Edit</button><button class="btn btn-danger btn-delete" (click)="delPlayer(a.id)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+<button routerLink="/player-form/ " class="btn btn-info btn-addplayer">ADD PLAYER</button>
+</div>
+

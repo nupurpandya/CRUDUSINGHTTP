@@ -1,0 +1,11 @@
+.btn-addplayer{
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+   
+}
+.btn-edit,.btn-delete{
+   
+    border: none;
+    border-radius: 5px;
+}
