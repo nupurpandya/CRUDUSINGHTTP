@@ -16,8 +16,8 @@ export class PlayerListComponent implements OnInit {
     this.playerservice.getPlayer().subscribe((res:any)=>this.user=res);
   }
   delPlayer(id:any){
-    this.playerservice.deletePlayer(id).subscribe((res:any)=>res);
-    this.playerservice.getPlayer().subscribe((res:any)=>this.user=res);
+    this.playerservice.deletePlayer(id).subscribe((res:any)=>this.playerservice.getPlayer().subscribe((res:any)=>this.user=res));
+    ;
   }
   editPlayer(id:any){
 
